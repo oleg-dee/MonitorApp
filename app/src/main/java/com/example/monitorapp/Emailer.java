@@ -6,6 +6,8 @@ import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Parcelable;
 
+import androidx.core.content.FileProvider;
+
 import java.io.File;
 import java.util.List;
 import java.util.Stack;
@@ -28,6 +30,7 @@ public class Emailer {
         Stack<Intent> intents = new Stack<Intent>();
         Intent i = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto",
                 "info@domain.com", null));
+        i.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         List<ResolveInfo> activities = context.getPackageManager()
                 .queryIntentActivities(i, 0);
 
@@ -53,7 +56,7 @@ public class Emailer {
     {
         Intent i = new Intent(Intent.ACTION_SEND);
         i.setType("*/*");
-        i.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
+        i.putExtra(Intent.EXTRA_STREAM, FileProvider.getUriForFile(context, context.getPackageName()+".fileprovider", file));
         i.putExtra(Intent.EXTRA_EMAIL, new String[] {
                 RECIPIENT_EMAIL
         });

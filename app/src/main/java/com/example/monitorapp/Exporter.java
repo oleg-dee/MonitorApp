@@ -2,6 +2,7 @@ package com.example.monitorapp;
 
 import android.content.Context;
 import android.os.Build;
+import android.os.Environment;
 
 import com.opencsv.*;
 
@@ -80,10 +81,10 @@ public class Exporter {
 
     public File exportToCSV() throws IOException, IllegalAccessException, ExecutionException, InterruptedException {
 
-        String baseDir = android.os.Environment.getExternalStorageDirectory().getAbsolutePath();
+        File baseDir = context.getExternalFilesDir("filesToSend");
         String fileName = "MonitorAppEntries.csv";
         String filePath = baseDir + File.separator + fileName;
-        File f = new File(filePath);
+        File f = new File(baseDir, fileName);
         CSVWriter writer = null;
 
         List<String> rowList = new ArrayList<String>();
