@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">MonitorApp</string>
+    <string name="app_label">Енергомоніторинг</string>
+    <string name="copyrights">ДНУ «Науково-практичний центр профілактичної\nта клінічної медицини» ДУС м. Київ, Україна</string>
+    <string name="authors">Автори А. Денисенко, В. Черній, О. Денисенко</string>
+    <string name="app_full_title">Периопераційний енергомоніторинг</string>
+    <string name="inv_option">Інвазивний варіант</string>
+    <string name="noninv_option">Неінвазивний варіант</string>
+    <string name="mininv_option">Малоінвазивний варіант</string>
+    <string name="calculate">Розрахувати</string>
+    <string name="load_last">Завантажити останній</string>
+    <string name="export_all">Відправити всі</string>
+    <string name="pb_title">Барометричний тиск Pb (умовно 760 мм рт.ст.):</string>
+    <string name="mmHg">мм рт.ст.</string>
+    <string name="full_name_title">П.І.П.:</string>
+    <string name="in_words">прописом</string>
+    <string name="sex_title">Стать (ч/ж):</string>
+    <string name="sex">ч/ж</string>
+    <string name="age_title">Вік (роки):</string>
+    <string name="years">роки</string>
+    <string name="weight_title">Вага m (кг):</string>
+    <string name="kg">кг</string>
+    <string name="height_title">Зріст h (см):</string>
+    <string name="cm">см</string>
+    <string name="hb_title">Гемоглобін крові Hb (г/л):</string>
+    <string name="g_l">г/л</string>
+    <string name="co_title">Серцевий викид (Cardiac Output, CO) (л × хв^-1):</string>
+    <string name="co_measured_title">Серцевий викид (Cardiac Output, CO) визначений спеціальним обладнанням (л × хв^-1):</string>
+    <string name="l_min">(л × хв^-1)</string>
+    <string name="sao2_title">Сатурація артеріальної крові SaО2 (%):</string>
+    <string name="percent">%</string>
+    <string name="one">од.</string>
+    <string name="mmol_l">ммоль/л</string>
+    <string name="svo2_title">Сатурація змішаної венозної крові SvО2 (%):</string>
+    <string name="ve_title">Вентиляція легень Ve (мл × хв^-1):</string>
+    <string name="ml_min">мл × хв^-1</string>
+    <string name="peco2_title">Парціальний тиск СО2 у суміші, яка видихається PeCO2 (мм рт.ст.):</string>
+    <string name="s_title">Площа тіла S (м^-2):</string>
+    <string name="ci_title">Серцевий індекс CI (л × хв^-1 × м^-2):</string>
+    <string name="do2_title">Доставка кисню DO2 (мл × хв^-1):</string>
+    <string name="ido2_title">Індекс доставки кисню DO2I (мл × хв^-1 × м^-2):</string>
+    <string name="keo2_title">Коефіцієнт екстракції кисню О2ER (%):</string>
+    <string name="vo2_title">Споживання кисню VО2 (мл × хв^-1):</string>
+    <string name="ivo2_title">Індекс споживання кисню VО2I (мл × хв^-1 × м^-2):</string>
+    <string name="veco2_title">Виділення вуглекислого газу легенями Ve(CO2) (мл × хв^-1):</string>
+    <string name="rq_title">Дихальний коефіцієнт RQ (одиниці):</string>
+    <string name="mr_title">Метаболізм MR (кал × хв^-1):</string>
+    <string name="imr_title">Індекс метаболізму MRI (кал × хв^-1 × м^-2):</string>
+    <string name="ibmr_title">Індекс базального метаболізму BMRI (кал × хв^-1 × м^-2):</string>
+    <string name="sbp_title">Артеріальний тиск систолічний SBP (мм рт.ст.)</string>
+    <string name="dbp_title">Артеріальний тиск діастолічний DBP (мм рт.ст.)</string>
+    <string name="hr_title">Частота серцевих скорочень ЧСС HR (хв^-1)</string>
+    <string name="map_title">Середній артеріальний тиск MAP (мм рт.ст.)</string>
+    <string name="sv_title">Ударний об’єм кровообігу SV, Starr модифікація Заболотских І. Б. (мл)</string>
+    <string name="svri_title">Індекс загального судинного опору SVRI (дин × с × см^-5 м^-2)</string>
+    <!--    Non/min-inv section-->
+    <string name="add_option">Додаткова опція</string>
+    <!--    Non-inv section-->
+    <string name="rr_title">Частота дихання RR (хв^-1)</string>
+    <string name="min">хв^-1</string>
+    <string name="fio2_title">Фракція О2 в суміші, яка вдихається FiO2 (%):</string>
+    <string name="feo2_title">Фракція О2 в суміші, яка видихається FeO2 (%):</string>
+    <!--    Min-inv section-->
+    <string name="paco2_title">Парціальний тиск СО2 в артеріальній крові PаCO2 (мм рт.ст.):</string>
+    <string name="valv_title">Альвеолярна вентиляція легень Valv (мл × хв^-1)</string>
+    <string name="vd_title">Вентиляція мертвого простору VD (мл × хв^-1)</string>
+    <string name="vdve_title">Відношення VD/Ve (од)</string>
+    <string name="ph_title">Іони водню, pH крові (од.)</string>
+    <string name="hco3_title">Бікарбонат крові, НСО3 (ммоль/л)</string>
+    <string name="tmr_title">Цільовий метаболізм (Target Metabolic Rate, TMR) (кал × хв^-1)</string>
+    <string name="itmr_title">Індекс цільового метаболізму (Target Metabolic Rate Index, TMRI) (кал × хв ^-1 × м^-2)</string>
+    <!--    Inv/min-inv section-->
+    <string name="md_title">Ступінь порушення метаболізму (Metabolic Disorders, MD) (%):</string>
+    <!--    entries table section-->
+    <string name="entries_table_title">Реєстр розрахунків</string>
+    <string name="move_to_server">Перевантажити всі на сервер</string>
+    <string name="retrieve_from_server">Завантажити останні з сервера</string>
+    <string name="clear_all_entries">Видалити всі на пристрої</string>
+
+
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+    <!--    <string name=""></string>-->
+
+</resources>
