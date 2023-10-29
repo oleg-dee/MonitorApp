@@ -29,6 +29,17 @@ public class Exporter {
     private Map<String, String> namesFilterMap = new LinkedHashMap<String, String>() {{
         put("uid", "ID");
         put("full_name", "DETAILS");
+        put("ve", "VE");
+        put("peco2", "PECO2");
+        put("paco2", "PACO2");
+        put("veco2", "VECO2");
+        put("sao2", "SAO2");
+        put("svo2", "SVO2");
+        put("ph", "PH");
+        put("hco3", "HCO3");
+        put("valv", "VALV");
+        put("vd", "VD");
+        put("vdve", "VDVE");
         put("map", "MAP");
         put("hr", "HR");
         put("ci", "CI");

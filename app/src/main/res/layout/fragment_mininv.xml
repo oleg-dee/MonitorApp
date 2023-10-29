@@ -1044,6 +1044,15 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/add_option" />
 
+            <CheckBox
+                android:id="@+id/checkbox_simplified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/simplifiedMinInv"
+                app:layout_constraintBottom_toBottomOf="@+id/paco2"
+                app:layout_constraintStart_toEndOf="@+id/paco2"
+                app:layout_constraintTop_toTopOf="@+id/paco2" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>

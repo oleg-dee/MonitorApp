@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -248,32 +249,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public double getdouble(String s) {
-        s = s.trim();
-        NumberFormat format = NumberFormat.getInstance(getResources().getConfiguration().locale);
-        //dirty fix
-        if(((DecimalFormat)format).getDecimalFormatSymbols().getDecimalSeparator()==',')
-        {
-            s = s.replace('.',',');
-        }
-        if(((DecimalFormat)format).getDecimalFormatSymbols().getDecimalSeparator()=='.')
-        {
-            s = s.replace(',','.');
-        }
-        ////end of dirty fix
-        if (s.equals("")) {
-            return 0;
-        } else {
-            Number number = null;
-            try {
-                number = format.parse(s);
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
-            return number.doubleValue();
-        }
-    }
-
     public void setTextValue(int id, double val) {
         String s = String.format(getResources().getConfiguration().locale,"%15.2f", val);
         ((TextView) findViewById(id)).setText(s.trim());
@@ -286,39 +261,41 @@ public class MainActivity extends AppCompatActivity {
         //страница 1 - неинвазивный
         //страница 2 - малоинвазивный
 
+        Common c = new Common(this);
+
         Entry e = new Entry();
         e.entry_type = currentPage;
         e.full_name = "";
         e.sex = "";
 
-        e.pb = getdouble(((EditText) findViewById(R.id.pb)).getText().toString());
-        e.weight = getdouble(((EditText) findViewById(R.id.weight)).getText().toString());
-        e.height = getdouble(((EditText) findViewById(R.id.height)).getText().toString());
-        e.hb = getdouble(((EditText) findViewById(R.id.hb)).getText().toString());
-        e.sbp = getdouble(((EditText) findViewById(R.id.sbp)).getText().toString());
-        e.dbp = getdouble(((EditText) findViewById(R.id.dbp)).getText().toString());
-        e.hr = getdouble(((EditText) findViewById(R.id.hr)).getText().toString());
-        e.ve = getdouble(((EditText) findViewById(R.id.ve)).getText().toString());
+        e.pb = c.getdouble(((EditText) findViewById(R.id.pb)).getText().toString());
+        e.weight = c.getdouble(((EditText) findViewById(R.id.weight)).getText().toString());
+        e.height = c.getdouble(((EditText) findViewById(R.id.height)).getText().toString());
+        e.hb = c.getdouble(((EditText) findViewById(R.id.hb)).getText().toString());
+        e.sbp = c.getdouble(((EditText) findViewById(R.id.sbp)).getText().toString());
+        e.dbp = c.getdouble(((EditText) findViewById(R.id.dbp)).getText().toString());
+        e.hr = c.getdouble(((EditText) findViewById(R.id.hr)).getText().toString());
+        e.ve = c.getdouble(((EditText) findViewById(R.id.ve)).getText().toString());
         if ((currentPage == 1)||(currentPage == 2)) {
-            e.fio2 = getdouble(((EditText) findViewById(R.id.fio2)).getText().toString());
-            e.feo2 = getdouble(((EditText) findViewById(R.id.feo2)).getText().toString());
+            e.fio2 = c.getdouble(((EditText) findViewById(R.id.fio2)).getText().toString());
+            e.feo2 = c.getdouble(((EditText) findViewById(R.id.feo2)).getText().toString());
         }
-        e.peco2 = getdouble(((EditText) findViewById(R.id.peco2)).getText().toString());
+        e.peco2 = c.getdouble(((EditText) findViewById(R.id.peco2)).getText().toString());
         if ((currentPage == 0)||(currentPage == 2)) {
-            e.paco2 = getdouble(((EditText) findViewById(R.id.paco2)).getText().toString());
+            e.paco2 = c.getdouble(((EditText) findViewById(R.id.paco2)).getText().toString());
         }
         e.full_name = ((EditText) findViewById(R.id.full_name)).getText().toString();
         e.sex = ((EditText) findViewById(R.id.sex)).getText().toString();
-        e.age = getdouble(((EditText) findViewById(R.id.age)).getText().toString());
+        e.age = c.getdouble(((EditText) findViewById(R.id.age)).getText().toString());
 
-        e.co_measured = getdouble(((EditText) findViewById(R.id.co_measured)).getText().toString());
-        e.sao2 = getdouble(((EditText) findViewById(R.id.sao2)).getText().toString());
+        e.co_measured = c.getdouble(((EditText) findViewById(R.id.co_measured)).getText().toString());
+        e.sao2 = c.getdouble(((EditText) findViewById(R.id.sao2)).getText().toString());
         if (currentPage == 0) {
-            e.svo2 = getdouble(((EditText) findViewById(R.id.svo2)).getText().toString());
+            e.svo2 = c.getdouble(((EditText) findViewById(R.id.svo2)).getText().toString());
         }
         if ((currentPage == 0)||(currentPage == 2)) {
-            e.ph = getdouble(((EditText) findViewById(R.id.ph)).getText().toString());
-            e.hco3 = getdouble(((EditText) findViewById(R.id.hco3)).getText().toString());
+            e.ph = c.getdouble(((EditText) findViewById(R.id.ph)).getText().toString());
+            e.hco3 = c.getdouble(((EditText) findViewById(R.id.hco3)).getText().toString());
         }
 
         Calculator calculator = new Calculator();

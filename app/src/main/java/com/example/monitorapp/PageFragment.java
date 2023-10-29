@@ -5,6 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -54,7 +57,26 @@ public class PageFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-            SwitchCompat onOffSwitch = (SwitchCompat) view.findViewById(R.id.add_option);
+        CheckBox checkBox = (CheckBox) view.findViewById(R.id.checkbox_simplified);
+        if (checkBox != null){
+                checkBox.setOnCheckedChangeListener(( buttonView, isChecked) ->
+                {
+                    if (isChecked) {
+                        Common c = new Common(getContext());
+                        Calculator calculator = new Calculator();
+                        double peco2 = c.getdouble(((EditText) view.findViewById(R.id.peco2)).getText().toString());
+                        double paco2 = peco2 / calculator.getPeco2paco2Coeff();
+                        String s = String.format(getResources().getConfiguration().locale, "%15.2f", paco2);
+                        ((TextView) view.findViewById(R.id.paco2)).setText(s.trim());
+                        ((TextView) view.findViewById(R.id.paco2)).setEnabled(false);
+                    }
+                    else {
+                        ((TextView) view.findViewById(R.id.paco2)).setEnabled(true);
+                    }
+                });
+        }
+
+        SwitchCompat onOffSwitch = (SwitchCompat) view.findViewById(R.id.add_option);
             if (onOffSwitch != null) {
                 onOffSwitch.setOnCheckedChangeListener((buttonView, isChecked) ->
                 {

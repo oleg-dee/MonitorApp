@@ -69,6 +69,7 @@
     <string name="hco3_title">Бікарбонат крові, НСО3 (ммоль/л)</string>
     <string name="tmr_title">Цільовий метаболізм (Target Metabolic Rate, TMR) (кал × хв^-1)</string>
     <string name="itmr_title">Індекс цільового метаболізму (Target Metabolic Rate Index, TMRI) (кал × хв ^-1 × м^-2)</string>
+    <string name="simplifiedMinInv">Спрощений</string>
     <!--    Inv/min-inv section-->
     <string name="md_title">Ступінь порушення метаболізму (Metabolic Disorders, MD) (%):</string>
     <!--    entries table section-->
