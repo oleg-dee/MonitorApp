@@ -69,9 +69,24 @@ public class PageFragment extends Fragment {
                         String s = String.format(getResources().getConfiguration().locale, "%15.2f", paco2);
                         ((TextView) view.findViewById(R.id.paco2)).setText(s.trim());
                         ((TextView) view.findViewById(R.id.paco2)).setEnabled(false);
+                        ((TextView) view.findViewById(R.id.hco3)).setText("");
+                        ((TextView) view.findViewById(R.id.hco3)).setEnabled(false);
+                        ((TextView) view.findViewById(R.id.ph)).setText("");
+                        ((TextView) view.findViewById(R.id.ph)).setEnabled(false);
+                        ((TextView) view.findViewById(R.id.tmr)).setText("");
+                        ((TextView) view.findViewById(R.id.tmr)).setTextColor(((TextView) view.findViewById(R.id.tmr)).getTextColors().withAlpha(0));
+                        ((TextView) view.findViewById(R.id.itmr)).setText("");
+                        ((TextView) view.findViewById(R.id.itmr)).setTextColor(((TextView) view.findViewById(R.id.itmr)).getTextColors().withAlpha(0));
+                        ((TextView) view.findViewById(R.id.md)).setText("");
+                        ((TextView) view.findViewById(R.id.md)).setTextColor(((TextView) view.findViewById(R.id.md)).getTextColors().withAlpha(0));
                     }
                     else {
                         ((TextView) view.findViewById(R.id.paco2)).setEnabled(true);
+                        ((TextView) view.findViewById(R.id.hco3)).setEnabled(true);
+                        ((TextView) view.findViewById(R.id.ph)).setEnabled(true);
+                        ((TextView) view.findViewById(R.id.tmr)).setTextColor(((TextView) view.findViewById(R.id.tmr)).getTextColors().withAlpha(255));
+                        ((TextView) view.findViewById(R.id.itmr)).setTextColor(((TextView) view.findViewById(R.id.itmr)).getTextColors().withAlpha(255));
+                        ((TextView) view.findViewById(R.id.md)).setTextColor(((TextView) view.findViewById(R.id.md)).getTextColors().withAlpha(255));
                     }
                 });
         }

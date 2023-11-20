@@ -209,6 +209,13 @@ public class MainActivity extends AppCompatActivity {
                     {
                         if (field.getType().isPrimitive()) {
                             setTextValue(resID, Double.valueOf(currentValue.toString()));
+
+                            //признак упрощенного малоинвазивного расчета
+                            if (field.getName().equals("ph")) {
+                                Boolean isSimplified = Double.valueOf(currentValue.toString()) == 0;
+                                ((CheckBox) ((ViewPager2) findViewById(R.id.pager)).findViewById(R.id.checkbox_simplified)).setChecked(isSimplified);
+                            }
+
                         }
                         else
                         {
